@@ -3,6 +3,9 @@
 # MEZZANINE SETTINGS #
 ######################
 
+SITE_TITLE = "FC Bridgeport"
+SITE_TAGLINE = "Fitba and beer, aye"
+
 # The following settings are already defined with default values in
 # the ``defaults.py`` module within each of Mezzanine's apps, but are
 # common enough to be put here, commented out, for convenient
@@ -139,7 +142,8 @@ SITE_ID = 1
 USE_I18N = False
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = "f7a2ea88-f094-49ca-a35f-8cb5398b86787adc956e-82a4-4a08-aa16-ccf0efdf9d10aad593ca-397d-4575-93f9-7d623751d387"
+import os
+SECRET_KEY = os.environ['MEZZANINE_SECRET_KEY']
 
 # Tuple of IP addresses, as strings, that:
 #   * See debug comments, when DEBUG is true
