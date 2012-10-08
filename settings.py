@@ -6,6 +6,8 @@
 SITE_TITLE = "FC Bridgeport"
 SITE_TAGLINE = "Fitba and beer, aye"
 
+AUTH_PROFILE_MODULE = "players.Player"
+
 # The following settings are already defined with default values in
 # the ``defaults.py`` module within each of Mezzanine's apps, but are
 # common enough to be put here, commented out, for convenient
@@ -261,9 +263,10 @@ INSTALLED_APPS = (
     "mezzanine.forms",
     "mezzanine.pages",
     "mezzanine.galleries",
-    "mezzanine.twitter",
-    #"mezzanine.accounts",
+    #"mezzanine.twitter",
+    "mezzanine.accounts",
     #"mezzanine.mobile",
+    "players",
 )
 
 # List of processors used by RequestContext to populate the context.
