@@ -1,3 +1,5 @@
 Mezzanine==1.2.4
-psycopg2
+gevent
+gunicorn
 newrelic
+psycopg2
