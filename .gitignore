@@ -5,6 +5,5 @@
 .coverage
 local_settings.py
 activate.sh
-run-development.sh
 log/
 static/
