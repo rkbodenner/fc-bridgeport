@@ -40,13 +40,17 @@ You'll need virtualenv (to manage independent sets of Python packages), which in
 ## Database
 The site uses sqlite3 in development mode.
 
+0. Copy the file containing DB settings to the right place
+
+    cp local_settings.py.example local_settings.py
+
 0. Initialize the database. You will see some prompts.
 
     python manage.py syncdb
 
-0. Set up a superuser
-0. Use the default site record
-0. (Optionally) install initial content. You could also sync database content from production, or create your own.
+    0. Set up a superuser
+    0. Use the default site record
+    0. (Optionally) install initial content. You could also sync database content from production, or create your own.
 
 # Run
 
