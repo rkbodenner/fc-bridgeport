@@ -1,3 +1,13 @@
+# We use environment variables 'round here
+import os
+
+# SendGrid settings
+if os.environ.get('SENDGRID_USERNAME'):
+    EMAIL_HOST_USER = os.environ['SENDGRID_USERNAME']
+    EMAIL_HOST= 'smtp.sendgrid.net'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    EMAIL_HOST_PASSWORD = os.environ['SENDGRID_PASSWORD']
 
 ######################
 # MEZZANINE SETTINGS #
@@ -144,7 +154,6 @@ SITE_ID = 1
 USE_I18N = False
 
 # Make this unique, and don't share it with anybody.
-import os
 SECRET_KEY = os.environ['MEZZANINE_SECRET_KEY']
 
 # Tuple of IP addresses, as strings, that:

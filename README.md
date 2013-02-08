@@ -52,6 +52,20 @@ The site uses sqlite3 in development mode.
     0. Use the default site record
     0. (Optionally) install initial content. You could also sync database content from production, or create your own.
 
+### New Relic
+Set the NEW_RELIC_LICENSE_KEY environment variable.
+
+### SendGrid
+Set the SENDGRID_USERNAME and SENDGRID_PASSWORD environment variables.
+
+Otherwise, mail gets delivered with the local MTA. That probably won't work on stock OS X.
+
 # Run
+## Locally
 
     ./run-development.sh
+
+## Heroku
+### Add-ons
+* Postgres
+* SendGrid
